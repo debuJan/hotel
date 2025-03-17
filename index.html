@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Food Menu - 4 Star Hotel</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>4 Star Indian Cuisine</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#starters">Starters</a></li>
+                <li><a href="#main-courses">Main Courses</a></li>
+                <li><a href="#desserts">Desserts</a></li>
+                <li><a href="#beverages">Beverages</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Menu Section -->
+    <section id="starters" class="menu-section">
+        <h2>Starters</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="Paneer-tikka-500x500.jpg" alt="Paneer Tikka" />
+                <h3>Paneer Tikka</h3>
+                <p>Marinated paneer cubes grilled to perfection with Indian spices.</p>
+                <span>₹299</span>
+                <div class="quantity-control">
+                    <button onclick="changeQuantity('Paneer Tikka', 299, -1)">-</button>
+                    <input type="number" id="PaneerTikka-quantity" value="0" readonly />
+                    <button onclick="changeQuantity('Paneer Tikka', 299, 1)">+</button>
+                </div>
+                <button onclick="addToCart('Paneer Tikka', 299)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="61050397.jpeg" alt="Samosa" />
+                <h3>Samosa</h3>
+                <p>Golden fried pastry stuffed with spiced potatoes and peas.</p>
+                <span>₹99</span>
+                <div class="quantity-control">
+                    <button onclick="changeQuantity('Samosa', 99, -1)">-</button>
+                    <input type="number" id="Samosa-quantity" value="0" readonly />
+                    <button onclick="changeQuantity('Samosa', 99, 1)">+</button>
+                </div>
+                <button onclick="addToCart('Samosa', 99)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="kebab-cover-2.jpg" alt="Seekh Kebab" />
+                <h3>Seekh Kebab</h3>
+                <p>Minced meat skewers seasoned with aromatic spices and grilled.</p>
+                <span>₹399</span>
+                <div class="quantity-control">
+                    <button onclick="changeQuantity('Seekh Kebab', 399, -1)">-</button>
+                    <input type="number" id="SeekhKebab-quantity" value="0" readonly />
+                    <button onclick="changeQuantity('Seekh Kebab', 399, 1)">+</button>
+                </div>
+                <button onclick="addToCart('Seekh Kebab', 399)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="main-courses" class="menu-section">
+        <h2>Main Courses</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="1400x919-240222-TESCO-CEDAR-MARCH-STILLS-Butter-Chicken-Curry-TRF-0363-11-b633ee81-ae2c-4cb2-b672-771a7a0712a7-0-1400x919.jpg" alt="Butter Chicken" />
+                <h3>Butter Chicken</h3>
+                <p>Boneless chicken cooked in creamy tomato sauce.</p>
+                <span>₹499</span>
+                <div class="quantity-control">
+                    <button onclick="changeQuantity('Butter Chicken', 499, -1)">-</button>
+                    <input type="number" id="ButterChicken-quantity" value="0" readonly />
+                    <button onclick="changeQuantity('Butter Chicken', 499, 1)">+</button>
+                </div>
+                <button onclick="addToCart('Butter Chicken', 499)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="Dal-Makhani-edited-photos-5-of-6.webp" alt="Dal Makhani" />
+                <h3>Dal Makhani</h3>
+                <p>Slow-cooked lentils in a creamy sauce.</p>
+                <span>₹199</span>
+                <div class="quantity-control">
+                    <button onclick="changeQuantity('Dal Makhani', 199, -1)">-</button>
+                    <input type="number" id="DalMakhani-quantity" value="0" readonly />
+                    <button onclick="changeQuantity('Dal Makhani', 199, 1)">+</button>
+                </div>
+                <button onclick="addToCart('Dal Makhani', 199)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="lucknowi-chicken-biryani-recipe.jpeg" alt="Biryani" />
+                <h3>Biryani</h3>
+                <p>Aromatic rice with spiced chicken and saffron.</p>
+                <span>₹399</span>
+                <div class="quantity-control">
+                    <button onclick="changeQuantity('Biryani', 399, -1)">-</button>
+                    <input type="number" id="Biryani-quantity" value="0" readonly />
+                    <button onclick="changeQuantity('Biryani', 399, 1)">+</button>
+                </div>
+                <button onclick="addToCart('Biryani', 399)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="desserts" class="menu-section">
+        <h2>Desserts</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="003f0f0351967a7cb6212a8d9bfaf889_f956154e73.webp" alt="Gulab Jamun" />
+                <h3>Gulab Jamun</h3>
+                <p>Soft dough balls soaked in sugary syrup.</p>
+                <span>₹150</span>
+                <div class="quantity-control">
+                    <button onclick="changeQuantity('Gulab Jamun', 150, -1)">-</button>
+                    <input type="number" id="GulabJamun-quantity" value="0" readonly />
+                    <button onclick="changeQuantity('Gulab Jamun', 150, 1)">+</button>
+                </div>
+                <button onclick="addToCart('Gulab Jamun', 150)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="1683654225795-500x500.jpg" alt="Kulfi" />
+                <h3>Kulfi</h3>
+                <p>Traditional Indian ice cream made with milk and dry fruits.</p>
+                <span>₹199</span>
+                <div class="quantity-control">
+                    <button onclick="changeQuantity('Kulfi', 199, -1)">-</button>
+                    <input type="number" id="Kulfi-quantity" value="0" readonly />
+                    <button onclick="changeQuantity('Kulfi', 199, 1)">+</button>
+                </div>
+                <button onclick="addToCart('Kulfi', 199)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="4-jalebi-outlets-4-s334r.avif" alt="Jalebi" />
+                <h3>Jalebi</h3>
+                <p>Sweet and crispy fried dessert soaked in syrup.</p>
+                <span>₹100</span>
+                <div class="quantity-control">
+                    <button onclick="changeQuantity('Jalebi', 100, -1)">-</button>
+                    <input type="number" id="Jalebi-quantity" value="0" readonly />
+                    <button onclick="changeQuantity('Jalebi', 100, 1)">+</button>
+                </div>
+                <button onclick="addToCart('Jalebi', 100)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="beverages" class="menu-section">
+        <h2>Beverages</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="L00004_rajwadi-lassi_1080x.webp" alt="Lassi" />
+                <h3>Lassi</h3>
+                <p>Sweet yogurt drink with saffron and spices.</p>
+                <span>₹80</span>
+                <div class="quantity-control">
+                    <button onclick="changeQuantity('Lassi', 80, -1)">-</button>
+                    <input type="number" id="Lassi-quantity" value="0" readonly />
+                    <button onclick="changeQuantity('Lassi', 80, 1)">+</button>
+                </div>
+                <button onclick="addToCart('Lassi', 80)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="ginger-tea-recipe.webp" alt="Masala Chai" />
+                <h3>Masala Chai</h3>
+                <p>Spiced Indian tea with milk and herbs.</p>
+                <span>₹50</span>
+                <div class="quantity-control">
+                    <button onclick="changeQuantity('Masala Chai', 50, -1)">-</button>
+                    <input type="number" id="MasalaChai-quantity" value="0" readonly />
+                    <button onclick="changeQuantity('Masala Chai', 50, 1)">+</button>
+                </div>
+                <button onclick="addToCart('Masala Chai', 50)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Section -->
+    <section id="cart">
+        <h2>Your Cart</h2>
+        <div id="cart-summary">
+            <p>No items in your cart</p>
+            <p>Total: ₹0</p>
+            <div>
+                <label for="coupon">Enter Coupon Code:</label>
+                <input type="text" id="coupon" />
+            </div>
+            <button id="checkout-button">Checkout</button>
+        </div>
+    </section>
+
+    <!-- QR Code Section -->
+    <div id="qrcode-container">
+        <h3>Scan to Pay</h3>
+        <div id="qrcode"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 4 Star Indian Cuisine. All Rights Reserved.</p>
+        <p>Contact: 123-456-7890 | Email: info@restaurant.com</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
